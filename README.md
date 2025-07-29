@@ -45,7 +45,7 @@ OcrLib
 
 1. Windows 10 x64 + vs2019 + cmake(请自行安装)
 2. macOS 10.15
-3. Linux Ubuntu 1804 x64
+3. Linux Ubuntu 1804 x64 (如果想在linux_x64平台通用，需将libstdc++.so.6\libm.so.6拷贝到libRapidOcrOnnx.so同级目录下)
 
 ### 编译说明
 
