@@ -56,7 +56,8 @@ int main(int argc, char *argv[]) {
     input.dataLength = input.channels * input.width * input.height;
 
     OCR_RESULT ocrResult;
-    OCR_BOOL bRet = OcrDetectInput(handle, &input, &param, &ocrResult);
+    bool isRecog = false;
+    OCR_BOOL bRet = OcrDetectInput(handle, &input, &param, &ocrResult, isRecog);
     printf("OcrDetectInput ret=%d\n", bRet);
     if (bRet) {
         std::cout << "dbNetTime:" << ocrResult.dbNetTime
