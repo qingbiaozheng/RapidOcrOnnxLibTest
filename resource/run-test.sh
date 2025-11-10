@@ -19,6 +19,7 @@ fi
 PrepareVar
 
 TARGET_IMG=images/ymm0922_tBSsPl5CrGH1JD9xR-2b0A==.jpg
+
 if [ ! -f "$TARGET_IMG" ]; then
 echo "找不到待识别的目标图片：${TARGET_IMG}，请打开本文件并编辑TARGET_IMG"
 exit

@@ -62,3 +62,4 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/OcrLib/Linux-CLIB-CPU/include DEST
 # Install standalones dir
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/maintest.h DESTINATION ${CMAKE_INSTALL_PREFIX}/standalones)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/maintest.cpp DESTINATION ${CMAKE_INSTALL_PREFIX}/standalones)
+

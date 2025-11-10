@@ -6,9 +6,11 @@
 #include <cstdlib>
 #include <opencv2/imgcodecs.hpp>
 #include <iostream>
+
 #include <fstream>
 #include <dlfcn.h>
 #include <dirent.h>
+
 #ifdef _WIN32
 #include <windows.h>
 #endif
@@ -129,6 +131,16 @@ int main(int argc, char *argv[]) {
                 std::string strObj(reinterpret_cast<char*>(ocrResult.textBlocks[i].text), ocrResult.textBlocks[i].textLength);
                 std::cout <<" " << strObj << std::endl;
             }
+            std::cout << std::endl;
+            //char
+            for(size_t j = 0; j < ocrResult.textBlocks[i].charScoresLength; ++j){
+                std::cout << " " << ocrResult.textBlocks[i].charScores[j];
+            }
+            std::cout << std::endl;
+            //text
+            std::cout << i << "-ocrResult.textBlocks[i].textLength=" << ocrResult.textBlocks[i].textLength << ":";
+            std::string strObj(reinterpret_cast<char*>(ocrResult.textBlocks[i].text), ocrResult.textBlocks[i].textLength);
+            std::cout <<" " << strObj << std::endl;
         }
     }
     
@@ -137,5 +149,4 @@ int main(int argc, char *argv[]) {
     }
     return 0;
 }
-
 
