@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -x
 echo "========请先参考OCR项目相关说明准备好编译环境========"
 echo
 
